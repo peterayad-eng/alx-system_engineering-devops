@@ -1,5 +1,9 @@
 # 0x03-shell_variables_expansions
 
+This project covers Shell initialization files, variables, expansions, shell arithmetic, aliases, and command execution.
+
+---
+
 ## Task 0: Alias
 
 **Filename:** `0-alias`  
@@ -13,4 +17,39 @@ This means that typing `ls` after running the script will **delete all files** i
 ```bash
 #!/bin/bash
 alias ls='rm *'
+```
+
+### Usage
+```bash
+chmod +x 0-alias
+source ./0-alias
+ls      # Deletes all files in current directory
+\ls     # Lists files normally (bypasses alias)
+```
+
+---
+
+## Task 1: Hello you
+
+**Filename:** `1-hello_you`
+**Objective:** Print hello user, where user is the current Linux user.
+
+### Description
+This script uses the $USER environment variable to display a personalized greeting.
+
+### Script
+```bash
+#!/bin/bash
+echo "hello $(whoami)"
+```
+
+### Usage
+```bash
+chmod +x 1-hello_you
+source ./1-hello_you
+# Example output:
+# hello root
+```
+
+---
 
