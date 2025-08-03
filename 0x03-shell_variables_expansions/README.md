@@ -382,3 +382,29 @@ source ./13-print_float
 
 ---
 
+## Task 14: Decimal to Hexadecimal
+
+**Filename:** `100-decimal_to_hexadecimal`
+**Objective:** Convert a decimal number stored in the environment variable DECIMAL into base 16 and print the result.
+
+### Description
+This script reads  the value of DECIMAL from the environment, Converts it from base 10 (decimal) to base 16 (hexadecimal), and prints the hexadecimal result.
+
+### Script
+```bash
+#!/bin/bash
+printf "%x\n" "$DECIMAL"
+```
+
+### Usage
+```bash
+chmod +x 100-decimal_to_hexadecimal
+source ./100-decimal_to_hexadecimal
+# Example output:
+# $ export DECIMAL=16
+# $ source ./100-decimal_to_hexadecimal
+# 10
+```
+
+---
+
