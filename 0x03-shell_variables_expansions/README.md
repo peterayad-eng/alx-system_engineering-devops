@@ -104,3 +104,32 @@ source ./4-global_variables
 
 ---
 
+## Task 5: Local variables
+
+**Filename:** `5-local_variables`
+**Objective:** Lists all variables and functions currently available in the shell.
+
+### Description
+This script uses the set command to list all local variables, environment variables, and shell functions available in the current shell context.
+
+### Script
+```bash
+#!/bin/bash
+set
+```
+
+### Usage
+```bash
+chmod +x 5-local_variables
+source ./5-local_variables
+# Example output:
+# BASH=/bin/bash
+# BASH_VERSION='4.3.46(1)-release'
+# COLUMNS=133
+# HOME=/home/julien
+# LANG=en_US.UTF-8
+# PATH=/usr/local/bin:/usr/bin:/bin
+```
+
+---
+
