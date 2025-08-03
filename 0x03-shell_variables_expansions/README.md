@@ -53,3 +53,28 @@ source ./1-hello_you
 
 ---
 
+## Task 2: The path to success is to take massive, determined action
+
+**Filename:** `2-path`
+**Objective:** Add /action to the end of the system PATH variable.
+
+### Description
+This script modifies the PATH environment variable so that /action is the last directory the shell checks when searching for commands.
+
+### Script
+```bash
+#!/bin/bash
+export PATH=$PATH:/action
+```
+
+### Usage
+```bash
+chmod +x 2-path
+source ./2-path
+echo $PATH
+# Output example:
+# /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/action
+```
+
+---
+
