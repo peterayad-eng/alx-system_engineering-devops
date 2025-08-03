@@ -466,3 +466,30 @@ source ./102-odd
 
 ---
 
+## Task 17: I'm an Instant star Just add Water and Stir
+
+**Filename:** `103-water_and_stir`
+**Objective:** Adds the two numbers stored in the environment variables WATER and STIR and prints the result.
+
+### Description
+This script demonstrates base conversion and arithmetic in bash using environment variables.
+
+### Script
+```bash
+#!/bin/bash
+printf "%o\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr 01234567 bestchol
+```
+
+### Usage
+```bash
+chmod +x 103-water_and_stir
+source ./103-water_and_stir
+# Example output:
+# $ export WATER="ewwatratewa"
+# $ export STIR="ti.itirtrtr"
+# $ source ./103-water_and_stir
+# shtbeolhc
+```
+
+---
+
