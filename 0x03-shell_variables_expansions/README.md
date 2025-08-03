@@ -433,3 +433,28 @@ source ./101-rot13
 
 ---
 
+## Task 16: The Eggs of the Brood Need to be an Odd
+
+**Filename:** `102-odd`
+**Objective:** Encode and decode text using the ROT13 encryption method for ASCII characters.
+
+### Description
+This script reads input text from standard input (stdin) and applies ROT13 substitution by replacing the actual letter with the letter 13 positions after it in the alphabet.
+
+### Script
+```bash
+#!/bin/bash
+paste - - | cut -f1
+```
+
+### Usage
+```bash
+chmod +x 102-odd
+source ./102-odd
+# Example output:
+# $ echo '"Everyone is a proponent of strong encryption"' | ./101-rot13
+# "Rirelbar vf n cebcbarag bs fgebat rapelcgvba"
+```
+
+---
+
