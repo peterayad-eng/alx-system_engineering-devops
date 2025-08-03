@@ -78,28 +78,28 @@ echo $PATH
 
 ---
 
-## Task 3: If the path be beautiful, let us not ask where it leads
+## Task 4: Global variables
 
-**Filename:** `3-paths`
-**Objective:** Count the number of directories in the PATH.
+**Filename:** `4-global_variables`
+**Objective:** Lists all environment variables.
 
 ### Description
-This script counts how many directories are in the system's PATH variable by:
-1. Replacing : with newlines
-2. Counting the number of resulting lines
+Prints all global (environment) variables available in the current shell session.
+Uses the printenv command to display only exported variables.
 
 ### Script
 ```bash
 #!/bin/bash
-echo $PATH | tr ":" "\n" | wc -l
+printenv | sort
 ```
 
 ### Usage
 ```bash
-chmod +x 3-paths
-source ./3-paths
+chmod +x 4-global_variables
+source ./4-global_variables
 # Example output:
-# 7
+# HOME=/root
+# HOSTNAME=bedff1571be8
 ```
 
 ---
