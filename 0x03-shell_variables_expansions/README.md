@@ -262,3 +262,30 @@ source ./9-divide_and_rule
 
 ---
 
+## Task 10: Love is Anterior to Life, Posterior to Death, Initial of Creation, and the Exponent of Breath
+
+**Filename:** `10-love_exponent_breath`
+**Objective:** Calculate the result of raising the value of environment variable BREATH to the power of LOVE using shell arithmetic.
+
+### Description
+This script reads the values of environment variables BREATH and LOVE, uses the shell arithmetic power operator ** to raise BREATH to the power of LOVE, and prints the result.
+
+### Script
+```bash
+#!/bin/bash
+echo $((BREATH ** LOVE))
+```
+
+### Usage
+```bash
+chmod +x 10-love_exponent_breath
+source ./10-love_exponent_breath
+# Example output:
+# $ export BREATH=4
+# $ export LOVE=3
+# $ source ./10-love_exponent_breath
+# 64
+```
+
+---
+
