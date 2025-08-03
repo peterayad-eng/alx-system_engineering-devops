@@ -356,3 +356,29 @@ source ./12-combinations
 
 ---
 
+## Task 13: Floats
+
+**Filename:** `13-print_float`
+**Objective:** Print a number stored in the environment variable NUM with exactly two decimal places.
+
+### Description
+This script reads the value of NUM from the environment, Formats it to exactly two decimal places using printf, and prints the formatted number.
+
+### Script
+```bash
+#!/bin/bash
+printf "%.2f\n" "$NUM"
+```
+
+### Usage
+```bash
+chmod +x 13-print_float
+source ./13-print_float
+# Example output:
+# $ export NUM=98
+# $ source ./13-print_float
+# 98.00
+```
+
+---
+
