@@ -235,3 +235,30 @@ source ./8-true_knowledge
 
 ---
 
+## Task 9: Divide and Rule
+
+**Filename:** `9-divide_and_rule`
+**Objective:** Perform shell arithmetic division using values from two environment variables POWER and DIVIDE and print the result.
+
+### Description
+This script reads the values of environment variables POWER and DIVIDE, divides POWER by DIVIDE using shell arithmetic, and prints the result.
+
+### Script
+```bash
+#!/bin/bash
+echo $((POWER / DIVIDE))
+```
+
+### Usage
+```bash
+chmod +x 9-divide_and_rule
+source ./9-divide_and_rule
+# Example output:
+# $ export POWER=42784
+# $ export DIVIDE=32
+# $ source ./9-divide_and_rule
+# 1337
+```
+
+---
+
