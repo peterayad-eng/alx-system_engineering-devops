@@ -388,7 +388,7 @@ source ./13-print_float
 **Objective:** Convert a decimal number stored in the environment variable DECIMAL into base 16 and print the result.
 
 ### Description
-This script reads  the value of DECIMAL from the environment, Converts it from base 10 (decimal) to base 16 (hexadecimal), and prints the hexadecimal result.
+This script reads the value of DECIMAL from the environment, Converts it from base 10 (decimal) to base 16 (hexadecimal), and prints the hexadecimal result.
 
 ### Script
 ```bash
@@ -404,6 +404,31 @@ source ./100-decimal_to_hexadecimal
 # $ export DECIMAL=16
 # $ source ./100-decimal_to_hexadecimal
 # 10
+```
+
+---
+
+## Task 15: Everyone is a Proponent of Strong Encryption
+
+**Filename:** `101-rot13`
+**Objective:** Encode and decode text using the ROT13 encryption method for ASCII characters.
+
+### Description
+This script reads input text from standard input (stdin) and applies ROT13 substitution by replacing the actual letter with the letter 13 positions after it in the alphabet.
+
+### Script
+```bash
+#!/bin/bash
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+### Usage
+```bash
+chmod +x 101-rot13
+source ./101-rot13
+# Example output:
+# $ echo '"Everyone is a proponent of strong encryption"' | ./101-rot13
+# "Rirelbar vf n cebcbarag bs fgebat rapelcgvba"
 ```
 
 ---
