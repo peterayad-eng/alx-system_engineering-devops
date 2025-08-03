@@ -436,10 +436,10 @@ source ./101-rot13
 ## Task 16: The Eggs of the Brood Need to be an Odd
 
 **Filename:** `102-odd`
-**Objective:** Encode and decode text using the ROT13 encryption method for ASCII characters.
+**Objective:** Print every odd numbered line from the input, starting with the first line.
 
 ### Description
-This script reads input text from standard input (stdin) and applies ROT13 substitution by replacing the actual letter with the letter 13 positions after it in the alphabet.
+This script reads input text from standard input (stdin) and Prints only odd-numbered lines.
 
 ### Script
 ```bash
@@ -452,8 +452,16 @@ paste - - | cut -f1
 chmod +x 102-odd
 source ./102-odd
 # Example output:
-# $ echo '"Everyone is a proponent of strong encryption"' | ./101-rot13
-# "Rirelbar vf n cebcbarag bs fgebat rapelcgvba"
+# $ ls -1 | ./102-odd
+# 0-alias
+# 101-rot13
+# 10-love_exponent_breath
+# 12-combinations
+# 1-hello_you
+# 3-paths
+# 5-local_variables
+# 7-create_global_variable
+# 9-divide_and_rule
 ```
 
 ---
