@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=':'; set -f; dirs=($PATH); echo ${#dirs[@]}
+echo $((`echo -n "$PATH" | tr -cd : | wc -c` + 1))
