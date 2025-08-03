@@ -78,6 +78,32 @@ echo $PATH
 
 ---
 
+## Task 3: If the path be beautiful, let us not ask where it leads
+
+**Filename:** `3-paths`
+**Objective:** Count the number of directories in the PATH.
+
+### Description
+This script counts how many directories are in the system's PATH variable by:
+1.	Replacing : with newlines
+2.	Counting the number of resulting lines
+
+### Script
+```bash
+#!/bin/bash
+echo $PATH | tr ":" "\n" | wc -l
+```
+
+### Usage
+```bash
+chmod +x 3-paths
+source ./3-paths
+# Example output:
+# 7
+```
+
+---
+
 ## Task 4: Global variables
 
 **Filename:** `4-global_variables`
@@ -151,6 +177,31 @@ BEST="School"
 ```bash
 chmod +x 6-create_local_variable
 source ./6-create_local_variable
+# Example output:
+# echo $BEST
+# School
+```
+
+---
+
+## Task 7: Global variable
+
+**Filename:** `7-create_global_variable`
+**Objective:** Create a global (environment) variable that is accessible not only in the current shell but also by all child processes started from it.
+
+### Description
+This script creates a global variable named BEST and assigns it the value School.
+
+### Script
+```bash
+#!/bin/bash
+export BEST="School"
+```
+
+### Usage
+```bash
+chmod +x 7-create_global_variable
+source ./7-create_global_variable
 # Example output:
 # echo $BEST
 # School
