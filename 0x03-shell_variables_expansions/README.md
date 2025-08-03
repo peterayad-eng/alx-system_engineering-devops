@@ -178,7 +178,7 @@ BEST="School"
 chmod +x 6-create_local_variable
 source ./6-create_local_variable
 # Example output:
-# echo $BEST
+# $ echo $BEST
 # School
 ```
 
@@ -203,8 +203,34 @@ export BEST="School"
 chmod +x 7-create_global_variable
 source ./7-create_global_variable
 # Example output:
-# echo $BEST
+# $ echo $BEST
 # School
+```
+
+---
+
+## Task 8: Every Addition to True Knowledge is an Addition to Human Power
+
+**Filename:** `8-true_knowledge`
+**Objective:** Perform shell arithmetic by adding 128 to the value stored in the environment variable TRUEKNOWLEDGE and print the result.
+
+### Description
+This script reads the value of the environment variable TRUEKNOWLEDGE, Adds 128 to it using shell arithmetic, and prints the result.
+
+### Script
+```bash
+#!/bin/bash
+echo $((TRUEKNOWLEDGE + 128))
+```
+
+### Usage
+```bash
+chmod +x 8-true_knowledge
+source ./8-true_knowledge
+# Example output:
+# $ export TRUEKNOWLEDGE=1209
+# $ source ./8-true_knowledge
+# 1337
 ```
 
 ---
