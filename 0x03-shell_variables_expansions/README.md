@@ -289,3 +289,29 @@ source ./10-love_exponent_breath
 
 ---
 
+## Task 11: There are 10 Types of People in the World Those Who Understand Binary, and Those Who Don't
+
+**Filename:** `11-binary_to_decimal`
+**Objective:** Convert a binary number stored in an environment variable into its decimal equivalent using shell arithmetic.
+
+### Description
+This script reads the binary value stored in the BINARY environment variable, Uses shell arithmetic with base notation (2#) to interpret the binary value, and prints the decimal equivalent.
+
+### Script
+```bash
+#!/bin/bash
+echo $((2#${BINARY))
+```
+
+### Usage
+```bash
+chmod +x 11-binary_to_decimal
+source ./11-binary_to_decimal
+# Example output:
+# $ export BINARY=10100111001
+# $ source ./11-binary_to_decimal
+# 1337
+```
+
+---
+
