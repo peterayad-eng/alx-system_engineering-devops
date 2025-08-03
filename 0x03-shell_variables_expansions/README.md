@@ -91,7 +91,7 @@ This script counts how many directories are in the system's PATH variable by:
 ### Script
 ```bash
 #!/bin/bash
-echo $PATH | tr ':' '\n' | grep -cve "^$"
+IFS=':'; set -f; dirs=($PATH); echo ${#dirs[@]}
 ```
 
 ### Usage
