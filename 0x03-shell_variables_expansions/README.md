@@ -315,3 +315,44 @@ source ./11-binary_to_decimal
 
 ---
 
+## Task 12: Combination
+
+**Filename:** `12-combinations`
+**Objective:** Generate and print all possible two-letter lowercase combinations, excluding oo.
+
+### Description
+This script:
+1. Iterates over lowercase letters from a to z for both positions.
+2. Prints each combination on a new line.
+3. Excludes the combination oo.
+4. Ensures output is alphabetically ordered starting with aa.
+5. Fits within the 64-character limit requirement.
+
+### Script
+```bash
+#!/bin/bash
+echo {a..z}{a..z}|tr ' ' '\n'|grep -v oo
+```
+
+### Usage
+```bash
+chmod +x 12-combinations
+source ./12-combinations
+# Example output:
+# $ source ./12-combinations| head
+# aa
+# ab
+# ac
+# ad
+# ae
+# af
+# ag
+# ah
+# ai
+# aj
+# $ source ./12-combinations| wc -l
+# 675
+```
+
+---
+
