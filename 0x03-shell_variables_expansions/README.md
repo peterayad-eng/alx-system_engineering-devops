@@ -78,3 +78,29 @@ echo $PATH
 
 ---
 
+## Task 3: If the path be beautiful, let us not ask where it leads
+
+**Filename:** `3-paths`
+**Objective:** Count the number of directories in the PATH.
+
+### Description
+This script counts how many directories are in the system's PATH variable by:
+1. Replacing : with newlines
+2. Counting the number of resulting lines
+
+### Script
+```bash
+#!/bin/bash
+echo $PATH | tr ':' '\n' | wc -l
+```
+
+### Usage
+```bash
+chmod +x 3-paths
+source ./3-paths
+# Example output:
+# 7
+```
+
+---
+
