@@ -133,3 +133,28 @@ source ./5-local_variables
 
 ---
 
+## Task 6: Local variable
+
+**Filename:** `6-create_local_variable`
+**Objective:** Create a local variable in the current shell session that is not exported to child processes.
+
+### Description
+This script defines a local shell variable named BEST and assigns it the value School.
+
+### Script
+```bash
+#!/bin/bash
+BEST="School"
+```
+
+### Usage
+```bash
+chmod +x 6-create_local_variable
+source ./6-create_local_variable
+# Example output:
+# echo $BEST
+# School
+```
+
+---
+
