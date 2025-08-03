@@ -40,7 +40,7 @@ This script uses the $USER environment variable to display a personalized greeti
 ### Script
 ```bash
 #!/bin/bash
-echo "hello $(whoami)"
+echo "hello $USER"
 ```
 
 ### Usage
