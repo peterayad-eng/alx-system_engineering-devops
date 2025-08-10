@@ -1,0 +1,22 @@
+# Distributed Web Infrastructure
+## Diagram
+
+https://drive.google.com/file/d/1YvRx_2cImEKl0x6ATm_YDGWKvtJyCZKF/view?usp=drive_link
+
+## Added Components
+
+1. **Second Server**: Eliminate SPOF, enable horizontal scaling
+2. **Load Balancer (HAProxy)**: Distributes incoming requests between multiple servers to improve performance and reliability.
+3. **Database Primary-Replica Setup (MySQL)**: Read scalability and data redundancy
+
+## Database Cluster
+
+- **Primary**: Handles all writes
+- **Replica**: Read-only copy
+
+## Issues with this infrastructure
+
+1. **SPOF**: The Load Balancer and Primary Database are still single points of failure.
+2. **Security**: No firewall or HTTPS leaves it vulnerable to attacks.
+3. **Monitoring**: Failures and performance issues may go undetected.
+
