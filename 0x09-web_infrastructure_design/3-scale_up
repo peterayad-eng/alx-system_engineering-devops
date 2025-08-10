@@ -1,0 +1,27 @@
+# Scale up
+
+## Diagram
+
+https://drive.google.com/file/d/1Dnc-6AZXKlVlclSsrmkoCut2duegw1GE/view?usp=drive_link
+
+## Added Elements
+
+1. **Additional Server**: Added to increase infrastructure capacity and distribute the load more effectively.
+
+2. **Additional Load Balancer (HAProxy) Configured as a Cluster**: Ensures high availability of the load balancing function itself.
+
+3. **Component Separation (Web Server, Application Server, Database on Separate Servers)**: 
+
+	- Web Server (Nginx): Handles static content, SSL termination, and HTTP requests.
+
+	- Application Server: Processes business logic and runs application code.
+
+	- Database Server (MySQL): Stores and manages persistent data.
+
+## Benefits of This Scale-Up
+
+1. **High Availability**: Eliminating single points of failure in load balancing.
+2. **Better Performance**: Each component has its own resources, avoiding bottlenecks.
+3. **Scalability**: You can independently add more servers for web, application, or database as traffic grows.
+4. **Fault Tolerance**: Failure in one service layer doesn’t stop the others.
+
