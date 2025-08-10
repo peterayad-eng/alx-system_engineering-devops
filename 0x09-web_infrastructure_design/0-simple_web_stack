@@ -21,8 +21,6 @@ https://drive.google.com/file/d/1cVpEP4fb34SDcmW-eX3Mdtx_i9DXsa_d/view?usp=drive
 ## Issues with this infrastructure
 
 1. **SPOF (Single Point of Failure)**: One server means if it goes down, the entire website is offline.
-
 2. **Downtime during maintenance**: Restarting Nginx, application server, or database for updates will take the whole site offline.
-
 3. **scalability**: Cannot handle high traffic; limited to one server’s CPU, RAM, and bandwidth.
 

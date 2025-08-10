@@ -1,0 +1,20 @@
+# Secured & Monitored Infrastructure
+
+## Diagram
+
+https://drive.google.com/file/d/1hLpYtZJuZbaIibPynFG2MZicYf20MsN9/view?usp=drive_link
+
+## Added Components
+
+1. **Firewalls (3 total)**: Protect each major component (Load Balancer, Web Server, Database) from unauthorized access by filtering incoming and outgoing traffic.
+2. **SSL Certificate**: Encrypts communication between the client’s browser and the load balancer, ensuring data confidentiality and integrity.
+3. **Monitoring Clients (3 total)**: Collect metrics, logs, and performance data from each server (Load Balancer, Web Server, Database).
+
+## Issues with this infrastructure
+
+1. **SSL Termination at Load Balancer Level**: If decryption happens only at the load balancer and traffic between the load balancer and internal servers is unencrypted, it exposes internal network traffic to potential interception.
+
+2. **Single Primary Database**: Only one MySQL server can accept writes; if it fails, no write operations can be processed, creating a single point of failure for data writes.
+
+3. **Same Components on All Servers**: If each server has all components (DB, Web, App), it may lead to resource contention and increases the attack surface, compromising one server could compromise the entire stack.
+
