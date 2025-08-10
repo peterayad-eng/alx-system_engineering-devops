@@ -1,0 +1,28 @@
+# Simple Web Stack Design
+
+## Diagram
+
+https://drive.google.com/file/d/1cVpEP4fb34SDcmW-eX3Mdtx_i9DXsa_d/view?usp=drive_link
+
+## Components
+
+1. **Server**: A physical or virtual machine that provides services, resources, or data to other computers (clients). In this case, it hosts our website and database.
+
+2. **Domain Name**: The domain name is a human-readable address (foobar.com) that maps to the server's IP (8.8.8.8) so users don’t have to remember the IP.
+
+3. **DNS Record**: The www in www.foobar.com is usually a CNAME (alias) to foobar.com, or an A record directly pointing to the IP. In this scenario, likely an A record mapping directly to 8.8.8.8.
+
+4. **Web Server (Nginx)**: Receives HTTP requests from the user’s browser, handles static content, and forwards dynamic requests to the application server.
+
+5. **Application Server**: Runs the backend logic of the application (e.g., Django, Flask, PHP-FPM). Processes requests, queries the database if needed, and returns results to the web server.
+
+6. **Database (MySQL)**: Stores, retrieves, and manages persistent data used by the application (e.g., user data, posts, configurations).
+
+## Issues with this infrastructure
+
+1. **SPOF (Single Point of Failure)**: One server means if it goes down, the entire website is offline.
+
+2. **Downtime during maintenance**: Restarting Nginx, application server, or database for updates will take the whole site offline.
+
+3. **scalability**: Cannot handle high traffic; limited to one server’s CPU, RAM, and bandwidth.
+
